@@ -36,13 +36,12 @@ jobs:
         docker build . --file ./docker/fr/Dockerfile --tag ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:$IMAGE_TAG
         docker login ghcr.io -u borbely-dominik-peter -p ${{ secrets.GHCR_TOKEN }}
         docker push ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:$IMAGE_TAG
-        sed -i --debug 's|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:'"$IMAGE_TAG"'|' deployment.yaml
+        sed -i 's|          image: docker pull ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|          image: docker pull ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:"$IMAGE_TAG"|' deployment.yaml
 
         docker build . --file ./docker/ba/Dockerfile --tag ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:$IMAGE_TAG
         docker login ghcr.io -u borbely-dominik-peter -p ${{ secrets.GHCR_TOKEN }}
         docker push ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:$IMAGE_TAG
-        sed -i 's|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:'"$IMAGE_TAG"'|' deployment.yaml
-
+        sed -i 's|          image: docker pull ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|          image: docker pull ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:"$IMAGE_TAG"|' deployment.yaml
         git config --global user.name "borbely-dominik-peter"
         git config --global user.email "borbely.dominik.peter@students.jedlik.eu"
 
