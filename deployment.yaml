@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773435220
+          image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773435281
           ports:
             - containerPort: 80
       imagePullSecrets:
