@@ -18,7 +18,7 @@ spec:
           ports:
             - containerPort: 80
       imagePullSecrets:
-        - name: ghcr-auth-token
+        - name: ghcr-auth-token-v2
 # --- separates, allows multiple things in 1 file
 ---
 apiVersion: v1
