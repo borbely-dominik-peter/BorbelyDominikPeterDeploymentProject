@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: docker pull ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:hell
+          image: docker pull ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:"$IMAGE_TAG"
           ports:
             - containerPort: 80
       imagePullSecrets:
