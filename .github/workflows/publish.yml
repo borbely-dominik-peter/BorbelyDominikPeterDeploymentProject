@@ -1,0 +1,61 @@
+name: Docker Image CI & Publish to Kubernetes
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+  # lehetővé teszi, hogy "kézzel" elindítsam a folyamatot
+  workflow_dispatch:
+
+  #időzített indítás
+  #schedule:
+  #  - cron: '04 10 * * *'
+
+# default is readonly, set RW instead
+permissions:
+  contents: write
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: genarate image tag
+      run: |
+        echo "IMAGE_TAG=$(date +%s)" >> $GITHUB_ENV
+
+
+    - uses: actions/checkout@v4
+    - name: Build the Docker image
+      run: |
+        docker build . --file /docker/fr/Dockerfile --tag ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:$IMAGE_TAG
+        docker login ghcr.io -u borbely-dominik-peter -p ${{ secrets.GHCR_TOKEN }}
+        docker push ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:$IMAGE_TAG
+        sed -i 's|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj:'"$IMAGE_TAG"'|' deployment.yaml
+
+        docker build . --file /docker/ba/Dockerfile --tag ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:$IMAGE_TAG
+        docker login ghcr.io -u borbely-dominik-peter -p ${{ secrets.GHCR_TOKEN }}
+        docker push ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:$IMAGE_TAG
+        sed -i 's|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj:'"$IMAGE_TAG"'|' deployment.yaml
+
+
+        git config --global user.name "borbely-dominik-peter"
+        git config --global user.email "borbely.dominik.peter@students.jedlik.eu"
+
+        git add deployment.yaml
+        git commit -m "update K8S image tag in deployment.yaml"
+        git push 
+        
+        mkdir -p ~/.kube
+        echo "${{ secrets.JEDLIK_K8S_CONFIG }}" | base64 -d > ~/.kube/config
+        kubectl apply -f ./deployment.yaml
+
+
+# Powershell command to create base64 from config file
+# $bytes = [System.IO.File]::ReadAllBytes("$env:USERPROFILE/.kube/config")
+# [System.Convert]::ToBase64String($bytes)  
+        
