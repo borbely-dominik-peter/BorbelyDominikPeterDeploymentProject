@@ -14,9 +14,11 @@ spec:
     spec:
       containers:
         - name: nginx
-          i
+          image: docker pull ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773428995
           ports:
             - containerPort: 80
+      imagePullSecrets:
+        - name: ghcr-auth-token
 # --- separates, allows multiple things in 1 file
 ---
 apiVersion: v1
