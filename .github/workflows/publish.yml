@@ -36,7 +36,7 @@ jobs:
         docker build . --file ./docker/fr/Dockerfile --tag ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:$IMAGE_TAG
         echo "LOGINLOGINLOGIN"
         docker login ghcr.io -u borbely-dominik-peter -p ${{ secrets.GHCR_TOKEN }}
-        echo "LOGINLOGINLOGIN Over"
+        echo "LOGINLOGINLOGIN Over2"
         docker push ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:$IMAGE_TAG
         sed -i 's|          image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|          image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:'"$IMAGE_TAG"'|' deployment.yaml
 
