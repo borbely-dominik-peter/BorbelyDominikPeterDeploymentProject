@@ -1,81 +1,324 @@
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 apiVersion: apps/v1
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 kind: Deployment # automatically restarts/starts pods, also spreads out requests into cluster
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 metadata:
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
   name: frontend-deployment
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 spec:
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
   replicas: 1 # amount of pods
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
   selector:
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
     matchLabels: # labels under a different name
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
       app: frontend-app
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
   template:  # what should the deployment create
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
     metadata:
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
       labels: 
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
         app: frontend-app
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
     spec:
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
       containers:
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
         - name: nginx
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
           image: docker pull ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773427858
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
           ports:
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
             - containerPort: 80
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 # --- separates, allows multiple things in 1 file
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 ---
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 apiVersion: v1
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 kind: Service
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 metadata:
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
   name: frontend-cluster-ip-service
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 spec:
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
   type: ClusterIP
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
   selector:
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
     app: frontend-app
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
   ports:
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
     - protocol: TCP
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
       targetPort: 80
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
       port: 80
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 ---
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 apiVersion: cert-manager.io/v1
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 kind: Certificate
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 metadata:
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
   name: frontend-certificate
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 spec:
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
   secretName: frontend-certificate
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
   issuerRef:
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
     name: letsencrypt-prod
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
     kind: ClusterIssuer
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
   dnsNames:
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
     - deployment-project-frontend-borbely-dominik-peter.jcloud.jedlik.cloud
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 ---
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 apiVersion: networking.k8s.io/v1
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 kind: Ingress
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 metadata:
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
   name: nginx-ingress
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
   #annotations # contains a variety of settings, ex.: https-only, whitelist
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 spec:
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
   ingressClassName: nginx #needed?
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
   tls:
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
     - hosts:
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
         - deployment-project-frontend-borbely-dominik-peter.jcloud.jedlik.cloud
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
       secretName: frontend-certificate
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
   rules:
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
     - host: deployment-frontend-borbelydominikpeter.jcloud.jedlik.cloud # url of pod
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
       http:
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
         paths: # distributes subpaths to different pods
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
           - path: /
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
             pathType: Prefix
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
             backend: # backend pod
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
               service: # type of ...
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
                 name: nginx-cluster-ip-service
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
                 port:
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
                   number: 80 # targetport
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 # command to execute: kubectl apply -f <FILENAME/.>
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 # to check if it works: kubectl get <pod/service>, kubectl describe pod <PODNAME>, kubectl logs <PODNAME>, kubectl cluster-info
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773429443|
+mage: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773429443|
 # to delete: kubectl delete -f <FILENAME/.>
