@@ -34,12 +34,12 @@ jobs:
       run: |
         ls
 
-        docker build . --file /docker/fr/Dockerfile --tag ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:$IMAGE_TAG
+        docker build . --file ./docker/fr/Dockerfile --tag ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:$IMAGE_TAG
         docker login ghcr.io -u borbely-dominik-peter -p ${{ secrets.GHCR_TOKEN }}
         docker push ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:$IMAGE_TAG
         sed -i 's|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj:'"$IMAGE_TAG"'|' deployment.yaml
 
-        docker build . --file /docker/ba/Dockerfile --tag ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:$IMAGE_TAG
+        docker build . --file ./docker/ba/Dockerfile --tag ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:$IMAGE_TAG
         docker login ghcr.io -u borbely-dominik-peter -p ${{ secrets.GHCR_TOKEN }}
         docker push ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:$IMAGE_TAG
         sed -i 's|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj:.*|image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj:'"$IMAGE_TAG"'|' deployment.yaml
