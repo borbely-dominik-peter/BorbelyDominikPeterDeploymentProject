@@ -73,4 +73,4 @@ spec:
 
 # command to execute: kubectl apply -f <FILENAME/.>
 # to check if it works: kubectl get <pod/service>, kubectl describe pod <PODNAME>, kubectl logs <PODNAME>, kubectl cluster-info
-# to delete: kubectl delete -f <FILENAME/.>   
+# to delete: kubectl delete -f <FILENAME/.> 
