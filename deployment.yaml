@@ -65,7 +65,7 @@ spec:
         paths: # distributes subpaths to different pods
           - path: /
             pathType: Prefix
-            frontend: # ???
+            backend: # ???
               service: # type of ...
                 name: frontend-cluster-ip-service
                 port:
