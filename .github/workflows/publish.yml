@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: genarate image tag
+    - name: generate image tag
       run: |
         echo "IMAGE_TAG=$(date +%s)" >> $GITHUB_ENV
 

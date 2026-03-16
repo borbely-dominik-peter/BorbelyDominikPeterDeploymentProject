@@ -34,18 +34,18 @@ spec:
       targetPort: 80
       port: 80
 
----
-apiVersion: cert-manager.io/v1
-kind: Certificate
-metadata:
-  name: frontend-certificate
-spec:
-  secretName: frontend-certificate
-  issuerRef:
-    name: letsencrypt-prod
-    kind: ClusterIssuer
-  dnsNames:
-    - deployment-project-frontend-borbely-dominik-peter.jcloud.jedlik.cloud
+# ---
+# apiVersion: cert-manager.io/v1
+# kind: Certificate
+# metadata:
+#   name: frontend-certificate
+# spec:
+#   secretName: frontend-certificate
+#   issuerRef:
+#     name: letsencrypt-prod
+#     kind: ClusterIssuer
+#   dnsNames:
+#     - deployment-project-frontend-borbely-dominik-peter.jcloud.jedlik.cloud
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -55,10 +55,10 @@ metadata:
   #annotations # contains a variety of settings, ex.: https-only, whitelist
 spec:
   ingressClassName: nginx #needed?
-  tls:
-    - hosts:
-        - deployment-project-frontend-borbely-dominik-peter.jcloud.jedlik.cloud
-      secretName: frontend-certificate
+  # tls:
+  #   - hosts:
+  #       - deployment-project-frontend-borbely-dominik-peter.jcloud.jedlik.cloud
+  #     secretName: frontend-certificate
   rules:
     - host: deployment-frontend-borbelydominikpeter.jcloud.jedlik.cloud # url of pod
       http:
@@ -67,7 +67,7 @@ spec:
             pathType: Prefix
             backend: # backend pod
               service: # type of ...
-                name: nginx-cluster-ip-service
+                name: frontend-cluster-ip-service
                 port:
                   number: 80 # targetport
 
