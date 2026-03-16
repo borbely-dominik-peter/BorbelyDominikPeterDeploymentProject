@@ -1,15 +1,17 @@
 const SBtn = document.querySelector("#submit");
 
 SBtn.addEventListener("click",async (e) => {
+    document.querySelector("#result").innerHTML = "";
     const TargetCountry = document.querySelector("#target").value;
     const QueryResult = await fetch(`http://localhost:8000/api/country/${TargetCountry}`);
-    const result = await QueryResult.json();
+
     if (!QueryResult.ok) {
         const p = document.createElement("p");
         p.innerHTML = "No Data Found";
         document.querySelector("#result").appendChild(p);
     }
     else{
+        const result = await QueryResult.json();
         const table = document.createElement("table");
         const thead = document.createElement("thead");
 

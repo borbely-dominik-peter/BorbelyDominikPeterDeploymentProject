@@ -1,3 +1,3 @@
-GET http://localhost:8000/api/country/Germany
+GET http://localhost:8000/api/country/France
 Accept: application/json
 Content-Type: application/json
