@@ -1,76 +1,129 @@
 apiVersion: apps/v1
-kind: Deployment # automatically restarts/starts pods, also spreads out requests into cluster
+kind: Deployment
 metadata:
-  name: frontend-deployment
+  name: nginx-test
 spec:
-  replicas: 1 # amount of pods
+  replicas: 1
   selector:
-    matchLabels: # labels under a different name
-      app: frontend-app
-  template:  # what should the deployment create
+    matchLabels:
+      app: nginx
+  template:
     metadata:
-      labels: 
-        app: frontend-app
+      labels:
+        app: nginx
     spec:
       containers:
-        - name: nginx
+        - name: nginx-pod
           image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773691076
           ports:
             - containerPort: 80
-      imagePullSecrets:
-        - name: ghcr-auth-token-v2
-# --- separates, allows multiple things in 1 file,
+          env:
+            - name: PMA_HOST
+              value: mariadb-test-cluster-ip-service  # Updated to use the service name
+
 ---
+
 apiVersion: v1
 kind: Service
 metadata:
-  name: frontend-cluster-ip-service
+  name: nginx-test-cluster-ip-service
 spec:
   type: ClusterIP
   selector:
-    app: frontend-app
+    app: nginx
   ports:
     - protocol: TCP
       targetPort: 80
       port: 80
 
-# ---
-# apiVersion: cert-manager.io/v1
-# kind: Certificate
-# metadata:
-#   name: frontend-certificate
-# spec:
-#   secretName: frontend-certificate
-#   issuerRef:
-#     name: letsencrypt-prod
-#     kind: ClusterIssuer
-#   dnsNames:
-#     - deployment-project-frontend-borbely-dominik-peter.jcloud.jedlik.cloud
-
 ---
+
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: frontend-ingress
-  #annotations # contains a variety of settings, ex.: https-only, whitelist
+  name: nginx-test-ingress
+  # annotations:
+    # nginx.ingress.kubernetes.io/whitelist-source-range: 10.0.23.0/24 # ip range filter, example locks to room 203
+
 spec:
-  ingressClassName: nginx #needed?
-  # tls:
-  #   - hosts:
-  #       - deployment-project-frontend-borbely-dominik-peter.jcloud.jedlik.cloud
-  #     secretName: frontend-certificate
+  ingressClassName: nginx
+
   rules:
-    - host: deployment-frontend-borbelydominikpeter.jcloud.jedlik.cloud # url of pod
+    - host: nginx-test-borbelydominikpeter.jcloud.jedlik.cloud
       http:
-        paths: # distributes subpaths to different pods
+        paths:
           - path: /
             pathType: Prefix
-            backend: # ???
-              service: # type of ...
-                name: frontend-cluster-ip-service
+            backend:
+              service:
+                name: nginx-test-cluster-ip-service
                 port:
-                  number: 80 # targetport
+                  number: 80
+    - host: laravel-test-borbelydominikpeter.jcloud.jedlik.cloud
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: laravel-test-cluster-ip-service
+                port:
+                  number: 80 
 
-# command to execute: kubectl apply -f <FILENAME/.>
-# to check if it works: kubectl get <pod/service>, kubectl describe pod <PODNAME>, kubectl logs <PODNAME>, kubectl cluster-info
-# to delete: kubectl delete -f <FILENAME/.> 
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: laravel-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: laravel
+  template:
+    metadata:
+      labels:
+        app: laravel
+    spec:
+      containers:
+        - name: laravel-pod
+          image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773691076
+          ports:
+            - containerPort: 8000
+          env:
+            - name: PMA_HOST
+              value: mariadb-test-cluster-ip-service  # Updated to use the service name
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: laravel-test-cluster-ip-service
+spec:
+  type: ClusterIP
+  selector:
+    app: laravel
+  ports:
+    - protocol: TCP
+      targetPort: 80
+      port: 8000
+
+---
+
+
+# apiVersion: v1
+# kind: PersistentVolume
+# metadata:
+#   name: borbely-dominik-pete-PV
+# spec:
+#   storageClassName: standard
+#   capacity:
+#     storage: 2Gi
+#   accessModes:
+#     - ReadWriteOnce
+#   hostPath:
+#     path: "/mnt/data/borbely-dominik-peter"
+
+
