@@ -4,6 +4,12 @@ Content-Type: application/json
 
 ####
 
+GET http://localhost:9999
+Accept: application/json
+Content-Type: application/json
+
+####
+
 
 GET http://laravel-test-borbelydominikpeter.jcloud.jedlik.cloud/api/country/France
 Accept: application/json

@@ -3,7 +3,14 @@ const SBtn = document.querySelector("#submit");
 SBtn.addEventListener("click",async (e) => {
     document.querySelector("#result").innerHTML = "";
     const TargetCountry = document.querySelector("#target").value;
-    const QueryResult = await fetch(`http://localhost:8000/api/country/${TargetCountry}`);
+    const LocalHostOptions = ["localhost", "127.0.0.1"];
+    const QueryResult = ""
+    if (!LocalHostOptions.includes(window.location.hostname)) {
+        QueryResult = await fetch(`http://localhost:8000/api/country/${TargetCountry}`);
+    }
+    else{
+        QueryResult = await fetch(`http://laravel-test-borbelydominikpeter.jcloud.jedlik.cloud/api/country/${TargetCountry}`);
+    }
 
     if (!QueryResult.ok) {
         const p = document.createElement("p");

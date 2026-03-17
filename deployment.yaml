@@ -90,7 +90,7 @@ spec:
         - name: laravel-pod
           image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773691076
           ports:
-            - containerPort: 8000
+            - containerPort: 80
           env:
             - name: PMA_HOST
               value: mariadb-test-cluster-ip-service  # Updated to use the service name
@@ -107,8 +107,9 @@ spec:
     app: laravel
   ports:
     - protocol: TCP
-      targetPort: 80
-      port: 8000
+      name: a
+      targetPort: 8000
+      port: 80
 
 ---
 
