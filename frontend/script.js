@@ -4,8 +4,9 @@ SBtn.addEventListener("click",async (e) => {
     document.querySelector("#result").innerHTML = "";
     const TargetCountry = document.querySelector("#target").value;
     const LocalHostOptions = ["localhost", "127.0.0.1"];
-    const QueryResult = ""
-    if (!LocalHostOptions.includes(window.location.hostname)) {
+    let QueryResult = ""
+    console.log(window.location.hostname);
+    if (LocalHostOptions.includes(window.location.hostname)) {
         QueryResult = await fetch(`http://localhost:8000/api/country/${TargetCountry}`);
     }
     else{
