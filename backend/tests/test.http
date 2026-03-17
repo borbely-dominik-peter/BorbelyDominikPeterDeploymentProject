@@ -11,7 +11,7 @@ Content-Type: application/json
 ####
 
 
-GET http://laravel-test-borbelydominikpeter.jcloud.jedlik.cloud/api/country/France
+GET http://laravel-deploymentproj-borbelydominikpeter.jcloud.jedlik.cloud/api/country/France
 Accept: application/json
 Content-Type: application/json
 
