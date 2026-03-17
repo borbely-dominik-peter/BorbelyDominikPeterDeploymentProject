@@ -43,7 +43,13 @@ metadata:
 
 spec:
   ingressClassName: nginx
-
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: 'true' 
+  tls:
+    - hosts:
+      - laravel-deploymentproj-borbelydominikpeter.jcloud.jedlik.cloud
+      - nginx-deploymentproj-borbelydominikpeter.jcloud.jedlik.cloud
+    secretName: jokes-certificate
   rules:
     - host: nginx-deploymentproj-borbelydominikpeter.jcloud.jedlik.cloud
       http:
@@ -105,18 +111,17 @@ spec:
 
 ---
 
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: deploymentproj-certificate
+spec:
+  secretName: deploymentproj-certificate
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  dnsNames:
+    - nginx-deploymentproj-borbelydominikpeter.jcloud.jedlik.cloud
+    - laravel-deploymentproj-borbelydominikpeter.jcloud.jedlik.cloud
 
-# apiVersion: v1
-# kind: PersistentVolume
-# metadata:
-#   name: borbely-dominik-pete-PV
-# spec:
-#   storageClassName: standard
-#   capacity:
-#     storage: 2Gi
-#   accessModes:
-#     - ReadWriteOnce
-#   hostPath:
-#     path: "/mnt/data/borbely-dominik-peter"
-
-
+---
