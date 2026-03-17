@@ -39,7 +39,7 @@ kind: Ingress
 metadata:
   name: deploymentproj-ingress
   # annotations:
-  #   nginx.ingress.kubernetes.io/ssl-redirect: 'true' 
+  #   nginx.ingress.kubernetes.io/ssl-redirect: 'true'     
 spec:
   ingressClassName: nginx
   # tls:
