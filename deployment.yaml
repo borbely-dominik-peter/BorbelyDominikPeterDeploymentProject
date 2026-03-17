@@ -39,17 +39,13 @@ kind: Ingress
 metadata:
   name: deploymentproj-ingress
   # annotations:
-    # nginx.ingress.kubernetes.io/whitelist-source-range:  10.0.23.0/24 # ip range filter, example locks to room 203
-
+  #   nginx.ingress.kubernetes.io/ssl-redirect: 'true' 
 spec:
   ingressClassName: nginx
-  annotations:
-    nginx.ingress.kubernetes.io/ssl-redirect: 'true' 
-  tls:
-    - hosts:
-      - laravel-deploymentproj-borbelydominikpeter.jcloud.jedlik.cloud
-      - nginx-deploymentproj-borbelydominikpeter.jcloud.jedlik.cloud
-    secretName: jokes-certificate
+  # tls:
+  #   - hosts:
+  #     - nginx-deploymentproj-borbelydominikpeter.jcloud.jedlik.cloud
+  #   - secretName: deploymentproj-certificate
   rules:
     - host: nginx-deploymentproj-borbelydominikpeter.jcloud.jedlik.cloud
       http:
