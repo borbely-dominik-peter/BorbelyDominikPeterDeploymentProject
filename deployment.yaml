@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: nginx-pod
-          image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773761843
+          image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773763084
           ports:
             - containerPort: 80
 ---
@@ -84,7 +84,7 @@ spec:
     spec:
       containers:
         - name: laravel-pod
-          image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773761843
+          image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773763084
           ports:
             - containerPort: 80
 ---
