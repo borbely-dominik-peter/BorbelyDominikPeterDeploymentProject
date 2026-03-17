@@ -43,7 +43,7 @@ kind: Ingress
 metadata:
   name: nginx-test-ingress
   # annotations:
-    # nginx.ingress.kubernetes.io/whitelist-source-range: 10.0.23.0/24 # ip range filter, example locks to room 203
+    # nginx.ingress.kubernetes.io/whitelist-source-range:  10.0.23.0/24 # ip range filter, example locks to room 203
 
 spec:
   ingressClassName: nginx
