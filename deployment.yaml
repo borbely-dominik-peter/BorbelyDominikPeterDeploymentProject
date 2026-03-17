@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-test
+  name: nginx-deploymentproj
 spec:
   replicas: 1
   selector:
@@ -14,19 +14,15 @@ spec:
     spec:
       containers:
         - name: nginx-pod
-          image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773762714
+          image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-fr:1773761843
           ports:
             - containerPort: 80
-          env:
-            - name: PMA_HOST
-              value: mariadb-test-cluster-ip-service  # Updated to use the service name
-
 ---
 
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-test-cluster-ip-service
+  name: nginx-deploymentproj-cluster-ip-service
 spec:
   type: ClusterIP
   selector:
@@ -41,7 +37,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: nginx-test-ingress
+  name: deploymentproj-ingress
   # annotations:
     # nginx.ingress.kubernetes.io/whitelist-source-range:  10.0.23.0/24 # ip range filter, example locks to room 203
 
@@ -49,24 +45,24 @@ spec:
   ingressClassName: nginx
 
   rules:
-    - host: nginx-test-borbelydominikpeter.jcloud.jedlik.cloud
+    - host: nginx-deploymentproj-borbelydominikpeter.jcloud.jedlik.cloud
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: nginx-test-cluster-ip-service
+                name: nginx-deploymentproj-cluster-ip-service
                 port:
                   number: 80
-    - host: laravel-test-borbelydominikpeter.jcloud.jedlik.cloud
+    - host: laravel-deploymentproj-borbelydominikpeter.jcloud.jedlik.cloud
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: laravel-test-cluster-ip-service
+                name: laravel-deploymentproj-cluster-ip-service
                 port:
                   number: 80 
 
@@ -75,7 +71,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: laravel-test
+  name: laravel-deploymentproj
 spec:
   replicas: 1
   selector:
@@ -88,19 +84,15 @@ spec:
     spec:
       containers:
         - name: laravel-pod
-          image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773762714
+          image: ghcr.io/borbely-dominik-peter/ghaction-k8s-13a-proj-ba:1773761843
           ports:
             - containerPort: 80
-          env:
-            - name: PMA_HOST
-              value: mariadb-test-cluster-ip-service  # Updated to use the service name
-
 ---
 
 apiVersion: v1
 kind: Service
 metadata:
-  name: laravel-test-cluster-ip-service
+  name: laravel-deploymentproj-cluster-ip-service
 spec:
   type: ClusterIP
   selector:
