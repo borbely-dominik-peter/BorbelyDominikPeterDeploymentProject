@@ -10,7 +10,7 @@ SBtn.addEventListener("click",async (e) => {
         QueryResult = await fetch(`http://localhost:8000/api/country/${TargetCountry}`);
     }
     else{
-        QueryResult = await fetch(`http://laravel-test-borbelydominikpeter.jcloud.jedlik.cloud/api/country/${TargetCountry}`);
+        QueryResult = await fetch(`laravel-deploymentproj-borbelydominikpeter.jcloud.jedlik.cloud/api/country/${TargetCountry}`);
     }
 
     if (!QueryResult.ok) {
